@@ -1,17 +1,16 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import Login from './views/login/Login.vue'
-
-import portalRoutes from './apps/portal/routes'
+import { createRouter, createWebHistory } from "vue-router";
+import Login from "./views/login/Login.vue";
+import portalRoutes from "./apps/portal/routes";
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
-      path: '/login',
+      path: "/login",
       component: Login,
     },
     ...portalRoutes,
   ],
-})
+});
 
-export default router
+export default router;
