@@ -1,5 +1,7 @@
-import { axiosCryptoClient as cryptoHttp } from '@system/endpoint/axios'
+import http from '@system/endpoint/axios'
 
 // 企业列表
 export const getCompanyList = (data: {}) =>
-  cryptoHttp.post('/api/blade-credit/credit/api/list/company', null, { params: data })
+  http.post('/api/blade-credit/credit/api/list/company', null, {
+    params: { ...data, __needCrypto: true },
+  })
