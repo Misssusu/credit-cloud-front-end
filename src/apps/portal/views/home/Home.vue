@@ -73,7 +73,7 @@ const send = reactive({
 const querySearch = () => {
   getCompanyList(send).then(res => {
     console.log('result-------', res.data)
-    const data = JSON.parse(result)
+    const data = res.data
     if (data.success) {
       compStore.companyList = data.data
       compStore.companyList = data.data

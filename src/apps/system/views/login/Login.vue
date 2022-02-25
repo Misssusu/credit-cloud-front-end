@@ -1,25 +1,37 @@
 <template>
   <div class="login-wrapper">
-    <div class="login-content">
-      <div class="login-title">
-        <span class="title"> 登录 </span>
-        <span class="title_e"> User Login </span>
+    <div class="login-border">
+      <div class="login-content">
+        <div class="login-title">
+          <span class="title"> 登录 </span>
+          <span class="title_e"> User Login </span>
+        </div>
+        <el-form ref="formRef" :model="loginForm">
+          <el-form-item>
+            <el-input v-model="loginForm.username" placeholder="请输入手机号码"></el-input>
+          </el-form-item>
+          <el-form-item>
+            <el-input
+              v-model="loginForm.password"
+              placeholder="请输入密码"
+              :type="password"
+            ></el-input>
+          </el-form-item>
+          <el-form-item>
+            <el-button type="primary" @click="handleLogin" size="large">登录</el-button>
+          </el-form-item>
+        </el-form>
+        <div class="video-mc"></div>
+        <video
+          autoplay
+          loop
+          muted
+          :id="videoItem.fileName"
+          v-on:error="videoLoadError(videoItem)"
+          src="/files/video2.mp4"
+        ></video>
+        <div class="video-mc-mode"></div>
       </div>
-      <el-form ref="formRef" :model="loginForm">
-        <el-form-item>
-          <el-input v-model="loginForm.username" placeholder="请输入手机号码"></el-input>
-        </el-form-item>
-        <el-form-item>
-          <el-input
-            v-model="loginForm.password"
-            placeholder="请输入密码"
-            :type="password"
-          ></el-input>
-        </el-form-item>
-        <el-form-item>
-          <el-button type="primary" @click="handleLogin" size="large">登录</el-button>
-        </el-form-item>
-      </el-form>
     </div>
   </div>
 </template>
@@ -45,6 +57,11 @@ const loginForm = reactive({
   image: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
 })
 
+const videoItem = reactive({
+  status: true,
+  fileName: 'v1',
+  src: '/files/video2.mp4',
+})
 onMounted(() => {
   console.log('Component is mounted!')
 })
@@ -62,7 +79,7 @@ const handleLogin = () => {
 .login-wrapper {
   width: 500px;
   height: 520px;
-  box-shadow: 0px 2px 22px 0px rgb(0 0 0 / 16%);
+  box-shadow: 0px 2px 22px 0px rgba(0, 0, 0, 0.16);
   border-radius: 14px;
   position: fixed;
   left: 0;
@@ -73,6 +90,18 @@ const handleLogin = () => {
   display: flex;
   align-items: center;
   justify-content: center;
+  .login-border {
+    position: relative;
+    align-items: center;
+    display: flex;
+    width: 500px;
+    // height: 540px;
+    height: 520px;
+    background: #ffffff;
+    box-shadow: 0px 2px 22px 0px rgba(0, 0, 0, 0.16);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+  }
   .login-content {
     margin: 0px 50px;
     width: 100%;
@@ -114,6 +143,39 @@ const handleLogin = () => {
       button {
         width: 100%;
       }
+    }
+    .video-mc {
+      position: fixed;
+      right: 0px;
+      bottom: 0px;
+      min-width: 100%;
+      min-height: 100%;
+      height: auto;
+      width: auto;
+      background: rgba(255, 255, 255, 0.5);
+      z-index: -10;
+    }
+    .video-mc-mode {
+      position: fixed;
+      right: 0px;
+      bottom: 0px;
+      min-width: 100%;
+      min-height: 100%;
+      height: auto;
+      width: auto;
+      background: #333;
+      opacity: 0.2;
+      z-index: -8;
+    }
+    video {
+      position: fixed;
+      right: 0px;
+      bottom: 0px;
+      min-width: 100%;
+      min-height: 100%;
+      height: auto;
+      width: auto;
+      z-index: -11;
     }
   }
 }

@@ -36,7 +36,7 @@ axiosClient.interceptors.response.use(
     // Do something with response data
 
     if (response.config.params.__needCrypto) {
-      return { ...response, data: JSON.parse(decryptAES(response.data.data, aesKey())) }
+      return { ...response, data: JSON.parse(decryptAES(response.data, aesKey())) }
     }
 
     return response
