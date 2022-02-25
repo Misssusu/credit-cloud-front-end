@@ -1,14 +1,25 @@
 module.exports = {
-  env: {
-    node: true,
-  },
-  extends: [
-    'eslint:recommended',
-    'plugin:vue/vue3-recommended',
-    'plugin:@typescript-eslint/recommended',
-    'prettier',
-  ],
+  root: true,
   overrides: [
+    {
+      files: ['**/*.vue'],
+      parser: 'vue-eslint-parser',
+      parserOptions: {
+        parser: '@typescript-eslint/parser',
+        sourceType: 'module',
+      },
+      extends: [
+        'eslint:recommended',
+        'plugin:vue/vue3-recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:prettier/recommended',
+      ],
+      env: {
+        node: true,
+        es2021: true,
+      },
+      rules: {},
+    },
     {
       env: {
         'shared-node-browser': true,
@@ -23,7 +34,6 @@ module.exports = {
       extends: [
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended',
-        'plugin:jest/recommended',
         'plugin:prettier/recommended',
       ],
       rules: {
@@ -35,19 +45,6 @@ module.exports = {
       files: ['**/*.js', '**/*.jsx'],
       parser: 'espree',
       extends: ['eslint:recommended', 'plugin:prettier/recommended'],
-      env: {
-        node: true,
-        es2021: true,
-      },
-      rules: {},
-    },
-    {
-      files: ['**/*.vue'],
-      parser: 'vue-eslint-parser',
-      parserOptions: {
-        parser: '@typescript-eslint/parser',
-        sourceType: 'module',
-      },
       env: {
         node: true,
         es2021: true,
