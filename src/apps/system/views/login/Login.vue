@@ -25,13 +25,11 @@
 </template>
 
 <script setup>
-import { decryptAES, aesKey } from '../../util/crypto'
-import { onMounted, onBeforeMount } from 'vue'
-import { getCaptcha, loginByUsername } from '../../api/api'
-import { ref, reactive } from 'vue'
+import { ref, reactive, onMounted, onBeforeMount } from 'vue'
 import { useRouter } from 'vue-router'
+import { getCaptcha, loginByUsername } from '@system/endpoint/api'
 
-const router = useRouter();
+const router = useRouter()
 const loginForm = reactive({
   //租户ID
   tenantId: '960604',
@@ -46,14 +44,15 @@ const loginForm = reactive({
   //预加载白色背景
   image: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
 })
+
 onMounted(() => {
   console.log('Component is mounted!')
 })
 
 const handleLogin = () => {
-  console.log('submit!',loginForm)
+  console.log('submit!', loginForm)
   loginByUsername(loginForm).then(res => {
-    console.log('res-----',res)
+    console.log('res-----', res)
     router.push('/portal/index')
   })
 }

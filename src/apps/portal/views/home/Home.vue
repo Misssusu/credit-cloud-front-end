@@ -57,29 +57,26 @@
 </template>
 
 <script setup>
-import { getCompanyList } from '../../../../api/api'
-import { encryptAES, aesKey, decryptAES } from '../../../../util/crypto'
-import { ref, reactive } from 'vue'
+import { reactive } from 'vue'
 import { useRouter } from 'vue-router'
-import { companyStore } from '../../../../stores/index'
+import { getCompanyList } from '@portal/endpoint/api'
+import { companyStore } from '@portal/stores'
 
-const router = useRouter();
-const compStore = companyStore();
+const router = useRouter()
+const compStore = companyStore()
 const send = reactive({
   data: '',
   type: 4, //  0 通过企业名称查,  1 通过统一社会信用代码查,  4 不限制
   showList: true,
 })
 
-
 const querySearch = () => {
   getCompanyList(send).then(res => {
-    const result = decryptAES(res.data, aesKey())
-    console.log('result-------', JSON.parse(result))
-    const data = JSON.parse(result);
-    if(data.success) {
-      compStore.companyList = data.data;
-      compStore.companyList = data.data;
+    console.log('result-------', res.data)
+    const data = JSON.parse(result)
+    if (data.success) {
+      compStore.companyList = data.data
+      compStore.companyList = data.data
       router.push('/portal/companyList')
     }
   })

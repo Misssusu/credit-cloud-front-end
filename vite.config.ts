@@ -27,6 +27,12 @@ export default defineConfig(async ({ command, mode }) => {
   const { appName } = data
   return {
     plugins: [vue()],
+    resolve: {
+      alias: {
+        '@system': resolve(__dirname, 'src/apps/system'),
+        '@portal': resolve(__dirname, 'src/apps/portal'),
+      },
+    },
     build: {
       outDir: `dist/${appName}`,
     },
