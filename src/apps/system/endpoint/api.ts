@@ -1,5 +1,4 @@
 import http from './axios'
-import { encryptAES, aesKey } from '../utils/crypto'
 import MD5Encrypt from '../utils/md5-encrypter'
 
 //用户登录
