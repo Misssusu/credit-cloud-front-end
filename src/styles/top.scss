@@ -1,0 +1,207 @@
+$height:65px;
+.avue-top {
+    position: relative;
+    color: rgba(0, 0, 0, .65);
+    font-size: 28px;
+    height: $height;
+    line-height: $height;
+    box-sizing: border-box;
+    white-space: nowrap;
+    .el-menu-item{
+        i,span{
+            font-size: 13px;
+        }
+    }
+    .el-menu--horizontal>.el-menu-item {
+      height: $height;
+      line-height: $height;
+    }
+}
+
+.avue-blue-top{
+    background: #3377FF;
+    .input-row{
+        width: 350px;
+        height: 65px;
+
+        .el-col{
+            margin-bottom: 0;
+        }
+
+        .el-col-15{
+            width: 282px;
+
+            input{
+                height: 36px;
+                border-right: none;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+                border: none;
+            }
+        }
+        .el-col-9 {
+            width: 68px;
+
+            .el-button{
+                width: 62px;
+                height: 34px;
+                line-height: 34px!important;
+                padding: 0;
+                border: 2px solid #fff;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                margin-top: 15px;
+            }
+        }
+    }
+
+    .el-dropdown{
+        color: #fff;
+    }
+}
+
+.avue-breadcrumb {
+    height: 100%;
+    i{
+        font-size: 30px !important;
+    }
+    &--active {
+        transform:rotate(90deg);
+    }
+}
+
+.top-menu {
+    box-sizing: border-box;
+    .el-menu-item {
+        padding: 0 10px;
+        border:none !important;
+    }
+}
+
+.top-bar__img {
+    margin: 0 8px 0 0;
+    vertical-align: middle;
+}
+
+.top-bar__left,
+.top-bar__right {
+    height: $height;
+    position: absolute;
+    top: 0;
+    i{
+        // line-height: $height;
+        font-size: 16px;
+        margin-right: 8px;
+    }
+    .el-link{
+        font-size: 14px;
+        // color: #3377FF;
+        line-height: 28px;
+        margin-right: 16px;
+        border: 1px solid #FFFFFF;
+        border-radius: 2px;
+        margin-left: 20px;
+        width: 78px;
+        height: 28px;
+        text-align: center;
+        position: relative;
+        .bool{
+            width: 6px;
+            height: 6px;
+            border-radius: 3px;
+            background: #FF5C26;
+            position: absolute;
+            top: -3px;
+            right: -3px;
+        }
+    }
+}
+
+.top-bar__left {
+    line-height: 65px;
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+
+.top-bar__right {
+    right: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.top-bar__item {
+    width: 350px;
+    height: 65px;
+    margin-left: 52px;
+    font-size: 16px;
+
+    &--show {
+        display: inline-block !important;
+    }
+    .el-badge__content.is-fixed{
+        top:12px;
+        right: 5px;
+    }
+
+    .input-row{
+        width: 350px;
+        height: 65px;
+
+        .el-col{
+            margin-bottom: 0;
+        }
+
+        .el-col-15{
+            width: 282px;
+
+            input{
+                height: 36px;
+                border-right: none;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+        .el-col-9 {
+            width: 68px;
+
+            .button-wrap{
+                height: 65px;
+                .el-button{
+                    width: 62px;
+                    height: 36px;
+                    padding: 0;
+                    line-height: 36px;
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                    margin-top: 15px;
+                }
+            }
+            
+        }
+    }
+}
+
+
+.top-bar__title {
+    height: 100%;
+    padding:0 40px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: inherit;
+    font-weight: 400;
+}
+
+.top-bar__logo{
+    float: left;
+    width: 102px;
+    height: 35px;
+    img{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}

@@ -1,0 +1,394 @@
+.company-container {
+    position: relative;
+    padding: 0 !important;
+    margin-bottom: 36px;
+    // overflow-x: hidden;
+    background-color: RGBA(245, 247, 249, 1);
+    .adv-img{
+        width: 100%;
+
+        img{
+            display: block;
+        }
+    }
+
+    .company-wrap {
+        margin-top: 14px;
+        .total {
+            color: #333;
+            height: 50px;
+            line-height: 50px;
+            padding-left: 30px;
+            background: #fff;
+            width: 920px;
+            box-sizing: border-box;
+            border-bottom: 1px solid rgba(238, 238, 238, 1);
+            .red{
+              font-size: 14px;
+              color: #333333;
+            }
+        }
+
+        .company-list {
+            width: 920px;
+                box-sizing: border-box;
+            .company-li {
+                background-color: #FFFFFF;
+                box-sizing: border-box;
+                padding: 0 30px;
+                cursor: pointer;
+                border-bottom: 1px solid rgba(238, 238, 238, 1);
+                position: relative;
+
+                .boder-com{
+                  position: absolute;
+                  width: 0;
+                  height: 0;
+                  background-color: #1C6DF4;
+                }
+                .right-to-left-border{
+                  top: 0;
+                  right: 0;
+                  height: 1px;
+                }
+                .right-to-bottom-border{
+                  top: 0;
+                  right: 0;
+                  width: 1px;
+                }
+                .left-to-top-border{
+                  left: 0;
+                  bottom: 0;
+                  width: 1px;
+                }
+                .left-to-right-border{
+                  left: 0;
+                  bottom: 0;
+                  height: 1px;
+                }
+                &:hover {
+                    padding-top: 0;
+                    // border: 1px solid #1C6DF4;
+                    box-shadow: 0px 2px 12px 0px rgba(28, 109, 244, 0.3);
+
+                    .right-to-left-border{
+                      transition: all 1s;
+                      width: 920px;
+                    }
+
+                    .right-to-bottom-border{
+                      transition: all 1s;
+                      height: 132px;
+                    }
+
+                    .left-to-top-border{
+                      transition: all 1s;
+                      height: 132px;
+                    }
+
+                    .left-to-right-border{
+                      transition: width 1s;
+                      width: 920px;
+                      -webkit-transition: width 1s;
+                      -moz-transition: width 1s;
+                      -ms-transition: width 1s;
+                      -o-transition: width 1s;
+                    }
+                    .company-item {
+                        border-bottom: none;
+                    }
+                }
+
+                .company-item {
+                    // margin: 20px 30px 20px;
+                    // padding-bottom: 20px;
+                    // margin: 45px 30px;
+                    // padding-bottom: 31px;
+
+                    .company {
+                        display: flex;
+
+                        .company-logo {
+                            position: relative;
+                            width: 118px;
+                            height: 118px;
+                            flex-shrink: 0;
+                            background: #fff;
+                            border: 1px solid rgba(112, 112, 112, 0.1);
+                        }
+
+                        .tag {
+                            display: inline-block;
+                            width: 40px;
+                            height: 19px;
+                            vertical-align: top;
+                            color: #fff;
+                            text-align: center;
+                            font-weight: 400;
+                            font-size: 12px;
+                            color: #FFFFFF;
+                            margin-left: 12px;
+                            line-height: 19px;
+                            &.gray {
+                                background: #C2C2C2;
+                                box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+                                border-radius: 2px 2px 2px 2px;
+                            }
+
+                            &.height {
+                              background: #FF5C26;
+                              box-shadow: 0px 2px 8px 0px rgba(255, 92, 38, 0.3);
+                              border-radius: 2px 2px 2px 2px;
+                            }
+
+                            span {
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+
+                .company-right {
+                    flex: 1;
+                    .company-right-top {
+                        // margin: 0 0 0 30px;
+                        padding-top: 25px;
+                        display: flex;
+                        justify-content: space-between;
+
+                        .company-info {
+                            // flex: 1;
+                            width: 80%;
+                            // margin-right: 68px;
+                            .company-name {
+                                line-height: 20px;
+                                font-weight: 700;
+                                color: #333;
+                                // white-space: nowrap;
+                                // text-overflow: ellipsis;
+                                // overflow: hidden;
+                            }
+
+                            .type-list {
+                                display: flex;
+                                margin-top: 15px;
+
+                                label {
+                                    padding: 2px 5px;
+                                    color: #4381ec;
+                                    background: rgba(213, 231, 255, 0.5);
+                                    border-radius: 3px;
+                                    margin-right: 5px;
+                                }
+                            }
+
+                            .type-content {
+                                margin-top: 18px;
+                                margin-bottom:28px;
+                                p{
+                                  margin-bottom:3px;
+                                }
+                                .right{
+                                  float: right;
+                                  width: 300px;
+                                }
+                                span {
+                                    font-size: 14px;
+                                    color: #888888;
+
+                                    &:last-of-type {
+                                        margin-right: 0;
+                                    }
+
+                                    label {
+                                        font-size: 14px;
+                                        color: #333333;
+                                    }
+
+                                    .email:hover {
+                                        color: #4381ec;
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+                        }
+
+                        .company-grade {
+                            height: 80px;
+                            display: flex;
+                            align-items: center;
+                            // border: 1px solid rgba(112,112,112,0.1);
+
+                            .el-icon-arrow-right {
+                                color: #cdcfd6;
+                                font-size: 28px;
+                            }
+
+                            li {
+                                width: 100px;
+                                height: 100px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                flex-direction: column;
+
+                                .type {
+                                    line-height: 20px;
+                                    color: #333;
+                                }
+
+                                .font_size_20 {
+                                    line-height: 26px;
+                                    font-weight: 700;
+                                }
+
+                                &:nth-of-type(2n) {
+                                    width: 98px;
+                                    border: 1px solid rgba(112, 112, 112, 0.1);
+                                    border-top: 0;
+                                    border-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+
+                    .company-right-bottom {
+                        margin: 38px 0 0 30px;
+                        .bangdan {
+                            display: flex;
+                            .el-tag {
+                                background: #ff8163;
+                                border-color: #ff8163;
+                                color: #fff;
+                                width: 20px;
+                                padding: 0;
+                                line-height: 20px;
+                                height: 20px;
+                                text-align: center;
+                                margin-right: 10px;
+                            }
+                            .bangdan-tag {
+                                width: 845px;
+
+                                label {
+                                    margin-right: 40px;
+                                }
+                            }
+
+                            .limit-height {
+                                margin-left: 90px;
+                            }
+                            .rotate {
+                                transform: rotate(180deg);
+                                -webkit-transform: rotate(180deg);
+                                -moz-transform: rotate(180deg);
+                                -ms-transform: rotate(180deg);
+                                -o-transform: rotate(180deg);
+                            }
+                        }
+                    }
+                }
+            }
+
+            & > li:last-of-type .company-item {
+                border-bottom: 0;
+            }
+
+            .el-pagination {
+                float: right;
+                overflow: hidden;
+                margin: 36px 0;
+            }
+        }
+    }
+
+    .company_floats {
+        position: inherit !important;
+        display: inline-block;
+        vertical-align: bottom;
+        margin-left: 12px;
+        img {
+          display: table-cell;
+          vertical-align: bottom;
+          padding: 1px;
+        }
+      }
+      .company_float {
+        position: fixed;
+        top: 78.5px;
+        left: calc((100vw - 1200px) / 2 + 928.5px);
+        img {
+          display: table-cell;
+          vertical-align: bottom;
+          padding: 1px;
+        }
+        .top {
+          width: 266px;
+          height: 510px;
+          background: #ffffff;
+          box-shadow: 0px 2px 22px 0px rgba(0, 0, 0, 0.02);
+          box-sizing: border-box;
+          margin-bottom: 14px;
+      
+          .title {
+            width: 266px;
+            height: 50px;
+            background: #ffffff;
+            border-bottom: 1px solid #eee;
+            padding: 18px;
+            font-size: 15px;
+            font-weight: bold;
+            color: #333333;
+            box-sizing: border-box;
+          }
+      
+          .list {
+            padding: 15px 14px;
+            box-sizing: border-box;
+      
+            li {
+              box-sizing: border-box;
+              height: 42px;
+              padding: 12px 0;
+      
+              .index {
+                display: inline-block;
+                vertical-align: top;
+                width: 22px;
+                height: 22px;
+                margin-right: 12px;
+                background: #eeeeee;
+                text-align: center;
+                line-height: 22px;
+                border-radius: 5px;
+                font-size: 12px;
+                color: #444444;
+              }
+      
+              .cont {
+                display: inline-block;
+                width: 200px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                letter-spacing: 0.6px;
+                font-size: 14px;
+                color: #444444;
+              }
+      
+              &:nth-child(1),
+              &:nth-child(2),
+              &:nth-child(3) {
+                .index {
+                  color: #ff5c26;
+                  height: 28px;
+                  background: url(../../assets/images/jinpai.png) no-repeat;
+                }
+              }
+            }
+          }
+        }
+      }
+    
+}
+

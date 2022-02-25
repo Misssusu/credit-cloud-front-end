@@ -1,0 +1,253 @@
+.business-container{
+    padding: 0!important;
+
+    .business-top{
+        width: 100%;
+        height: 220px;
+        background: url(../../assets/images/bangdan-banner.jpg) no-repeat;
+        background-size: 100% 100%;
+
+        .business-wrap{
+            color: #ffffff;
+            padding: 70px 0 0 28px;
+            box-sizing: border-box;
+
+            h1{
+                font-size: 22px;
+                font-weight: bold;
+                line-height: 26px;
+            }
+
+            .tips{
+                display: flex;
+                margin-top: 20px;
+                
+                p{
+                    font-size: 14px;    
+                    line-height: 17px;
+                    
+                    &:nth-of-type(1){
+                        margin-right: 250px;
+                    }
+                    &:nth-of-type(2){
+                        margin-right: 152px;
+                    }
+
+                    label{
+                        opacity: 0.72;
+                        margin-right: 12px;
+                    }
+                }
+            }
+
+        }
+    }
+        
+
+    .list-wrap{
+        .business-info{
+            margin-top: -60px;
+            box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.06);
+            border-radius: 12px;
+            -webkit-border-radius: 12px;
+            -moz-border-radius: 12px;
+            -ms-border-radius: 12px;
+            -o-border-radius: 12px;
+            padding: 24px 25px 26px 26px;
+            background: #fff;
+            min-height: 78px;
+
+
+            h3{
+                font-size: 16px;
+                font-weight: bold;
+                color: #333333;
+                line-height: 19px;
+                margin-bottom: 20px;
+                position: relative;
+                z-index: 1;
+
+                &::before{
+                    content: "";
+                    display: inline-block;
+                    width: 20px;
+                    height: 3px;
+                    background: #1C6DF4;
+                    box-shadow: 0px 2px 8px 0px rgba(28, 109, 244, 0.5);
+                    opacity: 0.88;
+                    border-radius: 1px;
+                    position: absolute;
+                    bottom: 2px;
+                    left: -8px;
+                    z-index: -1;
+                }
+            }
+
+            p{
+                font-size: 14px;
+                color: #666666;
+                line-height: 20px;
+            }
+        }
+
+        .total-wrap{
+            width: 100%;
+            margin: 26px 0 22px;
+            font-size: 14px;
+            padding-left: 8px;
+        }
+
+        .company-list{
+            margin-bottom: 18px;
+            background: #fff;
+
+            .el-col{
+                margin-bottom: 0;
+            }
+
+            .company-li{
+                display: flex;
+                padding: 30px 0 38px 22px;
+                position: relative;
+                box-sizing: border-box;
+                border-bottom: 1px solid #eee;
+                cursor: pointer;
+
+                .line {
+                    position: absolute;
+                    width: 0px;
+                    height: 0px;
+                    background: #1c6df4;
+                  }
+                  &:hover {
+                    .line {
+                      transition: all 1s;
+                    }
+                    & {
+                      box-shadow: 0px 2px 12px 0px rgba(28, 109, 244, 0.3);
+                    }
+                    .top-left-line {
+                      right: 0;
+                      top: 0;
+                      width: 100%;
+                      height: 1px;
+                    }
+                    .top-right-line {
+                      right: 0;
+                      top: 0;
+                      width: 1px;
+                      height: 100%;
+                    }
+                    .bottom-right-line {
+                      left: 0;
+                      bottom: 0;
+                      width: 1px;
+                      height: 100%;
+                    }
+                    .bottom-left-line {
+                      left: 0;
+                      bottom: 0;
+                      width: 100%;
+                      height: 1px;
+                    }
+                }
+
+                .logo{
+                    width: 64px;
+                    height: 64px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 17px;
+                    background: #FFFFFF;
+                    border: 1px solid #E1F1FC;
+                    box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.06);
+                    img{
+                        object-fit: contain;
+                    }
+                }
+
+                .company-name{
+                    font-size: 17px;
+                    color: #333333;
+                    line-height: 20px;
+                }
+
+                .type-content{
+                    line-height: 24px;
+                    span{
+                        font-size: 14px;
+                        color: #999;
+                        margin-right: 40px;
+                        
+                        &:last-of-type{
+                            margin-right: 0;
+                        }
+
+                        label{
+                            color: #333;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .bangdan{
+                    margin-top: 20px;
+                    .bangdan-tips{
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        text-align: center;
+                        line-height: 20px;
+                        font-size: 13px;
+                        color: #fff;
+                        margin-right: 14px;
+                        background: #FF5A26;
+                        box-shadow: 0px 2px 8px 0px rgba(255, 90, 38, 0.5);
+                        border-radius: 3px;
+                    }
+
+                    .tips-item{
+                        margin-left: 36px;
+                        color: #1C6DF4;
+                        font-size: 14px;
+                        line-height: 20px;
+                        
+                        &:first-of-type{
+                            margin-left: 0;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+
+    //总计
+    .more-data{
+        text-align: right;
+        padding: 42px 30px 42px 0;
+
+        .el-button--default{
+            width: 150px;
+            height: 36px;
+            border-radius: 0;
+            background: #fff;
+            border: 1px solid rgb(188, 217, 255);
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            -ms-border-radius: 0;
+            -o-border-radius: 0;
+            padding: 0;
+            font-size: 14px;
+            font-weight: 400;
+            color: #505050;
+
+        }
+
+        .el-button:hover{
+            color: #3377ff;
+            border: 1px solid #3377ff;
+        }
+        
+    }
+}

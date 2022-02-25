@@ -11,7 +11,7 @@ const projectBuildJsonPath = resolve(__dirname, "project.build.json");
 const projectNameList = ["portal", "monitor"];
 
 const appName = process.argv.at(-1);
-
+//对输入的包名进行校验
 if (!projectNameList.includes(appName)) {
   console.error("========================================");
   console.error(` 不存在的项目名称: ${appName} `);

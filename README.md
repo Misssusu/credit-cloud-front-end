@@ -9,19 +9,13 @@
 - [] Editorconfig
 - [] Husky + Lint Stage
 
-# routes
+# 安装依赖
+    
+    pnpm install
 
-```
-/login  -  system
-/portal -  portal
+# 启动项目
 
-```
-
-/portal
-/login?refer=/portal
-/portal
-
----
+    pnpm run dev
 
 # 多页面构建
 
